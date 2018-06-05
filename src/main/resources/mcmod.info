@@ -3,7 +3,7 @@
   "modid": "mountwhistle",
   "name": "Mount Whistle",
   "description": "乗り物MOBを召喚するアイテムを追加するMODです。",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "authorList": ["inokinn"]
 }
 ]

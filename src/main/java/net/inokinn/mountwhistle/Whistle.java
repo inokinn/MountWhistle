@@ -32,6 +32,7 @@ public class Whistle extends Item {
 			NBTTagCompound nbtTag = itemStack.getTagCompound();
 			if (nbtTag == null) {
 				nbtTag = new NBTTagCompound();
+				itemStack.setTagCompound(nbtTag);
 			}
 
 			if (nbtTag.hasKey("MountId") &&
@@ -68,7 +69,7 @@ public class Whistle extends Item {
 			if(server == null) {
 				Minecraft.getMinecraft().ingameGUI.getChatGUI().printChatMessage(new TextComponentString("召喚を試みました。"));
 			} else {
-				// シングルプレイの場合、すべてのエンティティからマウントを探す
+				// すべてのエンティティからマウントを探す
 				mount = server.getEntityFromUuid(mountId);
 				mount.setLocationAndAngles(playerIn.posX, playerIn.posY, playerIn.posZ, 0.0F, 0.0F);
 

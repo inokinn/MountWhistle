@@ -11,7 +11,6 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLConstructionEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.network.FMLNetworkEvent.ClientCustomPacketEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -19,7 +18,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class MountWhistle {
     public static final String MODID = "mountwhistle";
     public static final String NAME = "Mount Whistle";
-    public static final String VERSION = "1.0.2";
+    public static final String VERSION = "1.0.3";
     public static final String PAKETNAME = "MountWhistle";
 
     public static Item mountWhistle;
@@ -43,10 +42,5 @@ public class MountWhistle {
     @SideOnly(Side.CLIENT)
     public void registerModels(ModelRegistryEvent event) {
         ModelLoader.setCustomModelResourceLocation(mountWhistle, 0, new ModelResourceLocation(new ResourceLocation("mountwhistle", "mountwhistle"), "inventory"));
-    }
-
-    @SubscribeEvent
-    public void onPacket(ClientCustomPacketEvent event) {
-        return;
     }
 }
